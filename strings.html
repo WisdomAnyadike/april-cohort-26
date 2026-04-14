@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <p>hey , i love   food </p>
+    <pre> hey , i love   food </pre> -->
+
+    
+
+    <img id="image" src=""  alt=""> 
+    <br>
+    <br>
+
+    <input type="text" id="input"> <button onclick="sendMessage()"> send </button>
+
+    <p id="ptag" >  </p>
     
 </body>
 </html>
@@ -77,10 +89,77 @@ country.charAt(2)
 console.log('B'.charCodeAt(0));
 console.log('a'.charCodeAt(0));
 
-'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+let alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+
+let myNumber = +'456'
+let number2 = +'564'
+
+let total = myNumber + number2 
+console.log(total);
+
+console.log(parseInt('96.78wert6566'));
+
+let value = '10' + 10
+console.log(value);
+
+console.log(typeof value);
+console.log(typeof(value));
+
+let firstValue = 'i'
+let secondValue = 'am'
+let thirdValue = 'a'
+let forthValue = 'boy'
+let space = ' '
+
+let finalSentence = firstValue + space + secondValue + space + thirdValue + space + forthValue
+console.log(finalSentence);
+
+let finalSentence2 = `${firstValue} ${secondValue} ${thirdValue} ${forthValue}`
+console.log(finalSentence2);
+
+// the sum of 4 and 34 is 38
+let a = 4
+let b = 34
+let one = 'the sum of'
+let two = 'and'
+let three  = 'is'
+// let space = ' '
+
+let newSentence = one + space + a + space + two + space + b + space + three + space + (a + b)
+console.log(newSentence);
+
+let finalString = `${one} ${a} and ${b} is ${a + b}`
+console.log(finalString);
+
+// slice substring , substr 
+
+let myNewString =  finalString[0].toUpperCase() + finalString.slice(1 )
+console.log(myNewString);
 
 
- 
+
+
+// myParagraphTag.innerHTML = 'hello class'
+let imageTag = document.getElementById("image")
+imageTag.src = 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQL_MyRyRycZxRnT7As7K0UxotqXoi70QQDMIdL6exbPt-FrP2PxKkofsnT-nIdnltX3nDG2dBGBnWLyfcTNdu5w8zal4rpNAO-vUE&usqp=CAc'
+
+
+// inputTag.value = 'i love js'
+
+
+
+
+
+
+let myParagraphTag = document.getElementById("ptag")
+let inputTag = document.getElementById("input")
+
+ function sendMessage(params) {
+  
+    myParagraphTag.innerHTML = inputTag.value
+    
+    
+ }
 
 
 
