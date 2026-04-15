@@ -6,11 +6,90 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" id="mass"> 
+
+    <button onclick="calculateWeight()"> calculate its weight on earth </button>
     
-    
+    <p id="output">        </p>
 </body>
 </html>
 <script>
+    // weight = mass * gravity
+
+    let massInputTag = document.getElementById("mass")
+
+    let ptag = document.getElementById('output')
+
+    console.log(massInputTag , ptag);
+    
+
+    let number = 45
+    
+
+    function calculateWeight() {
+        let value =  +massInputTag.value
+        console.log(typeof value);
+        
+        const gravity = 9.81
+        let weight = (value * gravity).toFixed(1)
+        console.log(weight);
+ptag.innerHTML = `the weight of an object with a mass of ${value}kg is ${weight}N.`
+        // the weight of an object with mass sososo.. is sososo..
+
+        
+    }
+
+
+    // mathematical operators
+    //+ - / * ** %
+    let add = 45 + 34 + 67 + 839 +6782 + 67
+    let  subtract = 564 - 67
+    let divide = 4 / 2
+    let multiply = 4 * 5
+    let raisedToPower = 5 ** 3
+    let modulus = 5 % 3
+
+    // Math object
+ console.log(Math);
+
+ let myNumber = 45.532257
+ console.log(Math.floor(myNumber));
+ console.log(Math.ceil(myNumber));
+ console.log(Math.round(myNumber));
+console.log( Math.pow(3, 3));
+console.log(Math.abs(-450));
+console.log(Math.floor(Math.PI));
+console.log(Math.min(4,5,6,2,4,0,6,7,5,3,2));
+console.log(Math.max(4,5,6,2,4,0,6,7,5,3,2));
+
+console.log(Math.random());
+ // 0.0001 * 11 - 0.9999999 * 11 // Math.floor(0.002 - 10.9999) // 0 - 10
+
+Math.random() // 0.0001 * 5 - 0.999999 * 5 // 0.0005 - 4.995 // 0 + 1 -4  + 1   // 1 - 5
+Math.floor(Math.random() * 5) + 1
+
+Math.random() // 0.0001 * 5 - 0.999999 * 5 // 0.0005 - 4.995 // 1 -5
+Math.ceil(Math.random * 5)
+
+// 0 - 20
+// 0 100
+// 0-5
+Math.random() // 0.0001 * 21 - 0.999 * 21 // 0.0021  - 20.999 / 0 - 20
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+
   
 
 
