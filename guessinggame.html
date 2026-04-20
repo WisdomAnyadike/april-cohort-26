@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guessing game</h1>
+    <h4>Guess a number from 1 - 10</h4>
+    <input id="game" type="number">
+    <button onclick="guessGame()"> guess </button>
+    <p id="pTag"></p>
+</body>
+</html>
+<script>
+    let inputTag = document.getElementById("game") // input element
+    let pTag = document.getElementById("pTag") // p element
+
+
+
+     function guessGame(params) {
+         let value = +inputTag.value //3
+         if(value<1||value>20){
+            alert('Input should not be less than 1 or greater than 20')
+         }else{
+          let randomNumber = Math.floor((Math.random() * 20) + 1) // 12
+            if (value === randomNumber) {
+                pTag.innerHTML = `You guessed correct, the answer is ${value}`
+            }else {
+                pTag.innerHTML = `You guessed wrong, the answer is ${randomNumber}`
+            }
+         }
+        
+        
+
+     }
+
+
+
+
+
+</script>
