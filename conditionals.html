@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+
+    <button onclick="checkDays()"> check days </button>
+    <p id="output"> </p>
+    
+</body>
+</html>
+<script>
+
+    let number = 30
+
+    if (number > 0) {
+     console.log(`number is positive`)   
+    }
+    else if ( number < 0){
+      console.log(`number is negative`)     
+    } else{
+console.log(`number is zero`) 
+    }
+
+
+    let num = 5
+
+    if (num > 4) {
+       console.log(`hmm`) 
+    }else if (num === 5){
+        console.log(`haa`) 
+    }else {
+         console.log(`hey`) 
+    }
+
+    let inputElement = document.getElementById(`input`)
+    let outputElement = document.getElementById(`output`)
+
+//     function checkDays(params) {
+//         let month = inputElement.value.trim().toLowerCase() // january
+
+//         if(month === 'january' || month === 'march' || month === "may" || month === 'july' || month === 'august' || month === 'october' || month === 'december'){
+//         outputElement.innerHTML = `${month.toLowerCase().replace(month[0] , month[0].toUpperCase())} has 31days`
+//         } else if ( month === 'february' ) {
+//       outputElement.innerHTML = `${month.toLowerCase().replace(month[0] , month[0].toUpperCase())} has 28days`
+//      }
+//       else if ( month === 'april' || month === 'june' || month === 'september' || month === 'november'){
+// outputElement.innerHTML = `${month.toLowerCase().replace(month[0] , month[0].toUpperCase())} has 30days`
+//       } else {
+//    outputElement.innerHTML = 'invalid month' 
+//  }
+        
+//     }
+
+
+       function checkDays(params) {
+        let month = inputElement.value.trim().toLowerCase() // january
+
+        switch (month) {
+            case 'january': case 'march': case 'may': case 'july': case 'august': case 'october':case 'december':
+                  outputElement.innerHTML =  month + ' has 31days' 
+                break;
+                 case 'april': case 'june':  case 'september':   case 'november':      
+                  outputElement.innerHTML =  month + ' has 30days' 
+                break;
+                      case 'february':
+                  outputElement.innerHTML =  month + ' has 28days' 
+                break;
+        
+            default:
+                  outputElement.innerHTML = 'invalid month' 
+                break;
+        }       
+    }
+
+
+    switch (true) {
+        case (10 > 5 || 5 > 6):
+             console.log('c++');
+            break;
+
+              case (5 === 4):
+             console.log('python');
+            break;
+              case (2 < 5):
+            console.log('js');
+            
+            break;
+    
+        default:
+  console.log('java');
+            break;
+    }
+
+
+
+
+
+    let string = 'college'
+
+    console.log(string.replace('c', 'C')); // College
+    console.log(string[0].toUpperCase() + string.substring(1 , 7) ); // College
+
+
+
+
+    
+    
+
+
+
+
+</script>
