@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> <button> push </button> <button> pop </button>
+
+    
+</body>
+</html>
+<script>
+    let string = 'rava'
+    string[0] = 'j'
+
+
+
+
+
+
+    let newArr = new Array(4).fill('hey')
+    console.log(newArr);
+
+    console.log(newArr.length);
+
+    let array = ['one' , 'two' , 'three']
+    let lastIndex = array.length - 1
+
+    array[2] = 'four'
+
+    console.log(array);
+
+    let fruits = ['cherry' , 'apple']
+    let vegetables = ['carrot' , 'tomato']
+
+    let fruitsandVegetables = fruits.concat(vegetables , ['carrot'])
+    // let fruitandvegesCopy = [...fruitsandVegetables]
+// ['cherry' , 'apple' , 'carrot', 'tomato' , 'one' , 'two' , 'four' , ]
+console.log(fruitsandVegetables);
+
+console.log(fruitsandVegetables.lastIndexOf('carrot'));
+
+console.log(fruitsandVegetables.includes('tomato'));
+
+
+console.log(typeof fruitsandVegetables);
+
+console.log(Array.isArray(fruitsandVegetables));
+
+
+if (Array.isArray(fruitsandVegetables)) {
+    console.log('fruits and veges is an array');
+    
+}else {
+    console.log('fruits and veges is not an array');
+}
+
+
+console.log(fruitsandVegetables.toString());
+console.log(fruitsandVegetables.join(' and '));
+
+
+
+console.log('hello'.slice(0 , 2));
+
+let oneFruit = fruitsandVegetables.slice(0 , 1)
+
+console.log(fruitsandVegetables); // [ 'cherry' , 'bitter leaf' , 'apple' , 'carrot' , 'tomato' ,'carrot']
+let myCarrotArr = fruitsandVegetables.splice(1 , 0  , 'bitter leaf') //['carrot']
+console.log(myCarrotArr);
+
+console.log(fruitsandVegetables);
+
+let arr = ['one' , 'two' , 'three' , 'four']
+// arr.splice(4 , 0 , 'five')
+arr.push('five' , 'six' , 'seven')
+console.log(arr);
+arr.pop()
+arr.pop()
+arr.pop()
+console.log(arr);
+
+arr.shift()
+console.log(arr);
+arr.unshift('one')
+console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+   
+</script>
