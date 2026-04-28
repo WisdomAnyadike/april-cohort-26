@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" placeholder="weight in Kg" id="userWeight"> 
+<input type="text" placeholder="Height in M" id="userHeight">
+ <button onclick="calculateBmi()"> calculate BMI</button>
+
+    <p id="bmi"></p>
+
+</body>
+</html>
+<script>
+
+function calculateBmi(){
+    let weight = document.getElementById('userWeight').value.trim()
+    let height = document.getElementById('userHeight').value.trim()
+
+    if(weight === '' || height === ''){
+        alert('Please fill all required fields')
+    }else if( isNaN(weight) || isNaN(height)){
+        alert ('Only fill Numbers in the designated form')
+    }else{
+        let Bmi = weight/(height * height)
+        document.getElementById('bmi').innerHTML = Bmi 
+    }
+}
+
+
+
+
+
+
+
+</script>

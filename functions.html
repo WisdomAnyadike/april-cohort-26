@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <input id="myInput"> <button onclick="runFunction()"> click </button>
     
 </body>
 </html>
 <script>
+    // var total = undefined
+//     function display(params) {
+//     document.body.innerHTML = total
+// }
 //     function jump(params) {
 //     console.log('i am jumping');
     
@@ -72,6 +77,67 @@ mulitplyTwoNumbers( 5 ) // 25
 mulitplyTwoNumbers( 90 , 4 ) // 360
 
 
+function runFunction() {
+    let inputValue = document.getElementById('myInput').value.trim()
+    alert(sayHiToStudent(inputValue))
+
+}
+console.log(runFunction());
+
+function sayHiToStudent(student) {
+    return `hi ${student}`
+      }
+
+
+let sentence = sayHiToStudent('joy') + ', welcome to class!'
+console.log(sentence);
+
+
+console.log(sayHiToStudent('niyi'));
+
+
+
+function multiply() {
+
+    return function runMulitlyBy2(params) {
+
+    
+
+        return  function anotherFunction() {
+// let myFriend = 'daniel'
+// console.log(myFriend);
+             return params * 2
+          }
+    }
+    
+}
+
+
+console.log( multiply()(45)());
+
+
+
+
+
+function mulitply2Numbers(num1 , num2) {
+     return num1 * num2
+}
+
+display()
+
+
+
+
+var total = mulitply2Numbers(3 , 5) + mulitply2Numbers(8 , 5)
+
+function display(params) {
+    document.body.innerHTML = total
+}
+
+
+
+ 
+ mulitply2Numbers(56 , 90)
 
 
 </script>
