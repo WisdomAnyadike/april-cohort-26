@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// higher order function (array methods , loops and functions)
+// forEach , map , filter , some , every , find , findIndex , reduce
+
+let array = ['watermelon', 'pineapple' , 'orange' , 'cherry']
+
+
+let string  = ''
+
+let thisLoop = array.forEach(function (f , i , arr) {
+
+    console.log(f , i , arr);
+    
+    
+
+
+})
+
+
+console.log(thisLoop);
+
+
+console.log(string);
+
+// [0 , 5 , 10 , 15]
+let value = array.map(( fruit , i , arr )=> {
+
+    console.log(fruit , i , arr);
+    
+    return 5 * i
+    
+
+})
+
+console.log(value);
+
+
+
+let arrayOfNums = [1,7,2 , 3,9,5] 
+//[2 , 4 , 6 , 8 , 10]
+let evenNums = arrayOfNums.map((num , i)=> {
+
+    return num * 2
+})
+
+console.log(evenNums);
+
+
+let evenValuesArr = arrayOfNums.filter(( num , i )=> {
+
+
+console.log(num , i);
+return  num % 2 === 0
+
+
+})
+
+console.log(evenValuesArr);
+
+let isThereAtLeastOneEvenNumberInThisArr = arrayOfNums.some((num , i , arr)=> {
+
+
+console.log('hello');
+
+return num % 2 === 0
+
+
+})
+
+console.log(isThereAtLeastOneEvenNumberInThisArr);
+
+
+let isEveryMemberofTheArrayAOddNumber = arrayOfNums.every((num , i , arr)=> {
+
+
+    return num % 2 === 1
+})
+
+console.log(isEveryMemberofTheArrayAOddNumber);
+
+
+
+let members = ['joy'  , 'saheed' , 'abdullahi' , 'jason']
+
+let foundMember = members.find(( member , i , arr )=> {  return member === 'saheed'})
+console.log(foundMember);
+
+
+let foundMemberIndex = members.findIndex(( member , i , arr )=> {  return member === 'saheed'})
+console.log(foundMemberIndex);
+
+
+
+
+let prices = [23,56,75,32,12,56]
+
+let total = prices.reduce(( previous , current , i , arr)=> {  return  previous * current } , 0)
+
+</script>

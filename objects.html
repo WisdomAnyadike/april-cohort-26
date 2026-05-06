@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="output">
+
+
+    </p>
+
+    <button onclick="deleteMessage()"> delete</button>
+    
+</body>
+</html>
+<script>
+
+    let messages = ['hey' , 'hi' , 'hello']
+
+
+
+  
+// alert('hello')
+
+function deleteMessage(params) {
+  let canDelete =   confirm('are you sure?')
+  if (canDelete) {
+    alert('it has been deleted')
+  }
+}
+
+
+
+// let promptValue = prompt('Enter your name' , 'John Doe') 
+// console.log(promptValue);
+// if ( promptValue === null){
+//     alert('input a value')
+// } else if ( promptValue !== null  && promptValue.trim() === '' ) {
+// alert('value must not be empty')
+// }else {
+//          alert(`hey ${promptValue}`)
+// }
+
+
+
+let sqiCohort1 = {
+    students :  [ 'dan' , 'samuel' , 'joy'] ,
+    course : 'javascript' ,
+    month : 'april' ,
+    advance :  function (params) {
+        this.course = 'react'
+    } , 
+    moveToNextMonth: function (params) {
+        let months = ['january' , 'february' , 'march' , 'april' , 'may' , 'june' , 'july' , 'august' , 'september' , 'october' , 'november' , 'december']
+         let monthIndex = months.indexOf(this.month) 
+         if (monthIndex === months.length - 1) {
+            monthIndex = 0
+         } else {
+         monthIndex++
+         }
+         
+         this.month = months[monthIndex]
+    }, 
+
+
+}
+
+// sqiCohort1.advance()
+
+sqiCohort1.moveToNextMonth() 
+console.log(sqiCohort1);
+
+
+let student = {
+    name :'daniel' ,
+    hobbies : {
+        swim : {
+            where : ['salt beach' , 'kakanfo' , 'bar beach' , { 
+                name:'lagoon' , 
+                locations: [ 'lagos' , 'abuja' , ['oyo' , 'ijesa']]
+            } ] ,
+            when : '26 may',
+            why : {
+                forFun: true ,
+                forMyBabe: false ,
+            }
+        }
+    }
+}
+
+console.log(student.hobbies.swim.why.forMyBabe);
+
+
+let user = {
+    name :'david', 
+    email: 'david@gmail.com',
+    age:'26'
+}
+
+user.color = 'brown'
+user.name = 'davido'
+
+user.name = user.name.toUpperCase()
+
+
+for (const key in user) {
+    
+    console.log(key , user[key]);
+ 
+    
+}
+
+
+console.log(user['age'] , user.age);
+
+
+//  let newUser = user
+//  console.log(newUser);
+
+//  newUser.age = 13
+ console.log(user);
+
+
+ let keysArr = Object.keys(user)
+ console.log(keysArr);
+ 
+  let valuesArr = Object.values(user)
+  console.log(valuesArr );
+
+    let bothValuesAndKeysArr = Object.entries(user)
+  console.log(bothValuesAndKeysArr );
+  
+ 
+
+</script>

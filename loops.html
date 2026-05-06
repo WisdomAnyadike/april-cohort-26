@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+for ( let w = 0 ;  w <= 12  ; w++ ) {
+
+   console.log( `${w} * ${w} = ${w * w}`)
+    
+}
+
+
+
+
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland' ]
+const newArr = []
+for(let i = countries.length - 1 ; i >= 0 ; i--){
+  newArr.push(countries[i].toUpperCase())
+}
+  console.log(newArr);
+
+
+let prices = [23,56,75,32,12,56]
+
+let total = 0
+for (let index = 0; index < prices.length; index++) {
+    total += prices[index]
+    
+}
+
+console.log(total);
+
+
+let i = 7
+
+while (i <= 5) {
+  console.log(i)
+  i++
+}
+
+// 0 1 2 3 4 5
+
+
+
+let index = 7
+do {
+  console.log(i)
+  index++
+} while (index <= 5)
+
+// 0 1 2 3 4 5
+
+
+
+for (const price of prices) {
+    console.log(price);
+    
+}
+
+
+let foundMember
+
+let members = ['joy'  , 'abdullahi' , 'jason']
+
+for (let index = 0; index < members.length; index++) {
+  
+    if (members[index] === 'saheed') {
+        foundMember = 'saheed'
+        break
+    }
+    
+
+    foundMember = 'couldnt find saheed'
+}
+
+console.log(foundMember);
+
+
+
+
+
+</script>
