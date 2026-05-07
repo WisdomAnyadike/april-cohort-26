@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <p>Enter numbers:</p>
+
+    <input type="number" id="start" placeholder="start">
+    <input type="number" id="end" placeholder="end">
+
+    <br>
+    <button onclick="genrateOnclick()">Show Table</button>
+</body>
+</html>
+<script>
+    function generateOnclick() {
+        let start = document.getElementById("start").value
+        let end = document.getElementById("end").value
+
+        start = Number(start)
+        end = Number(end)
+
+        let output = " "
+
+        if (start >= end) {
+            output = "Start number must be less than end number"
+        }else {
+            for (i = start; i <= end; i++) {
+                output+= "<div class = 'Table - box'>"
+                output += "<h3> Table of ' + i + '</h3>"    
+                
+            }for (j = 1; j<= 12; j++) {
+                `${i} * ${j} = ${i * j} <br>`
+                
+            }
+            output += "</div>"
+        }
+        document.getElementById("result").innerHTML= output
+    }
+</script>
