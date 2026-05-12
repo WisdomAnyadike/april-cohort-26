@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="todo"> <button onclick="addTodo()"> add todo </button>
+    <p id="preview">
+
+
+    </p>
+    
+</body>
+</html>
+<script>
+// //1
+//     localStorage.setItem('username' , JSON.stringify({name:'david' , aka: 'davido'}))
+// //2 
+//  let val = localStorage.getItem('username')
+// console.log(val);
+
+// //3
+//  localStorage.removeItem('username')
+
+//  //4
+//  localStorage.clear()
+
+let todos = JSON.parse(localStorage.getItem('todoDatabase')) || []
+let inputTag = document.getElementById('todo')
+let preview = document.getElementById('preview')
+
+displayTodos()
+  
+
+function addTodo(params) {
+    let userTodo = inputTag.value.trim() // sleep
+    todos.push(userTodo)
+saveAndDisplay()
+   inputTag.value = ''
+
+}
+
+function saveAndDisplay(params) {
+        localStorage.setItem('todoDatabase' , JSON.stringify(todos))
+   displayTodos()
+}
+
+
+function displayTodos() {
+     preview.innerHTML = ''
+   todos.forEach((todo , i , arr)=> {
+    preview.innerHTML += `<p> ${todo} <button onclick="editTodo(${i} , '${todo}')"> edit </button> <button onclick="deleteTodo(${i})"> delete </button> <p/>`
+   })
+}
+
+function deleteTodo(index) {
+    // alert(`i want to delete ${index}`)
+    let canDelete = confirm('are you sure?')
+    if (canDelete) {
+        todos.splice(index , 1)
+   saveAndDisplay()
+        console.log(todos);
+        
+    }
+
+}
+
+
+function editTodo(index , todo) {
+    let promptValue = prompt('enter edit value here' , todo)
+    console.log(promptValue);
+    
+ if (promptValue === null) {
+    alert('no changes made')
+    return
+    }
+
+
+    if (promptValue.trim() === '') {
+alert('input field is mandatory')
+return
+    }
+
+    if (promptValue === todo) {
+        alert('cant edit with original value')
+        return
+    }
+
+
+    todos.splice(index , 1 , promptValue)
+    saveAndDisplay()
+
+    
+}
+
+
+</script>
