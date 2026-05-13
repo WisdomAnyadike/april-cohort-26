@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+    <button id="button1" onclick="changeBackground(event)" ondblclick="alert('hey')" onmouseover="changeColor(event)"> <b> click </b> <i> hmm </i> </button>
+<p> </p>
+
+<input type="text" onfocus="doSmth(event)">
+
+
+
+</body>
+</html>
+<script>
+
+    function changeBackground(ev) {
+   console.log(ev);
+   ev.target.parentElement.style.backgroundColor = 'red'
+   ev.target.nextElementSibling.nextElementSibling.style.outlineColor = 'yellow'
+        
+        
+    }
+
+
+    function changeColor(ev) {
+       function getR () {
+       return  Math.floor(Math.random() * 256)
+        }
+
+        // rgb(34,233,56)
+
+ev.target.style.color = `rgb(${getR()},${getR()},${getR()})`
+        
+    }
+
+
+    function doSmth(ev) {
+        ev.target.value = 'i just highlighted on this input'
+    }
+
+
+
+
+
+    
+</script>

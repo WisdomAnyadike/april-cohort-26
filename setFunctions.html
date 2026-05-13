@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="runFunction(event)" > click here </button>
+
+    <button onclick="stopTheInterval()"> stop Interval </button>
+      <button onclick="startTheInterval()"> start Interval </button>
+    
+</body>
+</html>
+<script>
+
+    // synchronous blocking  / asynchronous non-blocking
+
+
+
+//   setTimeout(()=> {
+
+// alert(`im using timeout! , ${theName}`)
+
+//    } , 5000)
+
+
+   let theName = 'david'
+
+console.log('hey');
+
+   for (let index = 0; index < 2000; index++) {
+    console.log(index);
+    
+    
+   }
+
+
+   console.log('wow');
+   
+
+
+   function runFunction(e) {
+    e.target.innerHTML = 'loading...'
+    e.target.disabled = true
+
+
+
+    setTimeout(()=> {
+     alert('Congratulationsssss!!!!!!!') 
+     e.target.innerHTML = 'click here'
+     e.target.disabled = false     
+    } , 3000)
+
+ 
+
+
+   }
+
+
+function changeBackground(params) {
+          function getR () {
+       return  Math.floor(Math.random() * 256)
+        }
+document.body.style.backgroundColor = `rgb(${getR()},${getR()},${getR()})`
+}
+
+
+  let colorChanger = null
+
+
+   function startTheInterval(params) {
+    colorChanger = setInterval(() => {
+    changeBackground()
+   }, 5000);
+   }
+
+
+   function stopTheInterval(params) {
+    clearInterval(colorChanger)
+   }
+
+
+</script>
