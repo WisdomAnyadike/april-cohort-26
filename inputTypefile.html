@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    #image{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+
+    <button id="myButton"> click </button>
+
+    <input id="input1" type="file" onchange="pickMedia(event)">
+    <img id="image" width="300" height="300">
+    
+</body>
+</html>
+<script>
+
+let button = document.getElementById('myButton')
+
+button.addEventListener('click' , (e)=> {
+    console.log('ive said hi');
+} )
+button.addEventListener('mouseover' , (e)=> {
+    e.target.innerHTML = 'you hovered'
+})
+
+button.addEventListener('mouseleave' , (e)=> {
+    e.target.innerHTML = 'click'
+})
+
+// function sayHi(params) {
+//     console.log('ive said hi');
+    
+// }
+
+// function showHover(params) {
+//      button.innerHTML = 'you hovered'
+// }
+
+// function leaveButton(params) {
+//       button.innerHTML = 'click'
+// }
+
+
+function pickMedia(ev) {
+    // document.getElementById('input1').files
+    let file = ev.target.files[0]
+
+    if (!file){
+        alert('please attach an image')
+        return
+    }
+
+    let reader = new FileReader()
+     reader.readAsDataURL(file)
+
+     reader.addEventListener( 'load' , (e)=> {
+        let image = document.getElementById('image')
+        image.style.display = 'block'
+        image.src = e.target.result
+
+     })
+
+    
+    // console.log(ev.target.files);
+    
+}
+
+
+</script>

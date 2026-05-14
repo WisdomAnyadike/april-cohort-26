@@ -33,7 +33,7 @@
            
         </main>
         <div>
-                <h1> pin: <span id="myPin"></span></h1>
+                <h1> pin: <span id="myPin"> </span></h1>
             </div>
         <button onclick="genAirtime()" class="btn btn-success">Generate Airtime</button>
 
@@ -69,3 +69,46 @@
     
 </body>
 </html>
+<script>
+
+    let cardDatabase = []
+
+
+function genAirtime() {
+
+    if (provider.value === '' || amount.value === '') {
+        alert('select fields are mandatory')
+        
+    }else {
+
+    let pin = ''
+for (let index = 0; index < 12; index++) {
+   pin = pin + Math.floor(Math.random() * 10) // 0-9
+    
+}    
+
+myPin.innerHTML = pin
+let cardObj = {
+    provider: provider.value,
+    amount: amount.value ,
+    isUsed : false ,
+    pin : pin
+}
+
+cardDatabase.push(cardObj)
+console.log(cardDatabase);
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+</script>
